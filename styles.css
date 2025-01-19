@@ -1,0 +1,87 @@
+/* General body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;  /* Light background color */
+}
+
+/* Content container styling */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Heading styling */
+h1 {
+  font-size: 36px;
+  color: #333;  /* Dark text color for contrast */
+  margin-bottom: 20px;
+}
+
+/* Images container styling */
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Styling for images */
+.images-container img {
+  max-width: 80%;
+  height: 300px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.images-container .left {
+  margin-right: 50px;
+}
+
+.images-container .right {
+  margin-left: 50px;
+}
+
+.images-container .slap {
+  position: absolute;
+  height: 300px;
+  visibility: hidden;
+  opacity: 0;
+  width: 600px;  /* Fixed width for the slap image */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Hover effect on parent container */
+.content-container:hover .left,
+.content-container:hover .right {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content-container:hover .slap {
+  visibility: visible;
+  opacity: 1;
+}
